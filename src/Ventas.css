@@ -1,0 +1,200 @@
+
+.ventas-container {
+  padding: 25px;
+  color: #292929;
+}
+
+.ventas-encabezado {
+  margin-bottom: 25px;
+}
+
+.ventas-encabezado h1 {
+  margin: 0 0 8px;
+  font-size: 27px;
+}
+
+.ventas-encabezado p {
+  color: #777;
+  margin: 0;
+}
+
+.mensaje-ventas {
+  padding: 13px;
+  background: #e8f2ff;
+  color: #174b85;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.resumen-ventas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.resumen-venta-card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #00000010;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.resumen-venta-card span {
+  color: #777;
+  font-size: 14px;
+}
+
+.resumen-venta-card strong {
+  color: #c0392b;
+  font-size: 25px;
+}
+
+.ventas-panel {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 8px #00000010;
+}
+
+.ventas-panel h2 {
+  margin: 0 0 20px;
+  font-size: 19px;
+}
+
+.ventas-vacio {
+  text-align: center;
+  padding: 25px;
+  color: #777;
+}
+
+.pedidos-cobro-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 18px;
+}
+
+.pedido-cobro-card {
+  border: 1px solid #eee;
+  padding: 18px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.pedido-cobro-card h3 {
+  margin: 0 0 15px;
+  color: #c0392b;
+}
+
+.pedido-cobro-card ul {
+  padding-left: 18px;
+}
+
+.pedido-cobro-card li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.pedido-cobro-card li span {
+  display: block;
+  color: #777;
+  margin-top: 3px;
+}
+
+.pedido-cobro-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-top: 1px solid #eee;
+  margin-top: 15px;
+}
+
+.pedido-cobro-total strong {
+  font-size: 21px;
+  color: #218044;
+}
+
+.pedido-cobro-card label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.pedido-cobro-card select {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  margin-bottom: 14px;
+  background: white;
+  color: #292929;
+}
+
+.btn-registrar-venta {
+  width: 100%;
+  padding: 12px;
+  background: #218044;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-registrar-venta:hover {
+  background: #176633;
+}
+
+.btn-registrar-venta:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.tabla-ventas-contenedor {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tabla-ventas {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 750px;
+}
+
+.tabla-ventas th,
+.tabla-ventas td {
+  padding: 13px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+}
+
+.tabla-ventas th {
+  background: #f8f8f8;
+}
+
+.venta-pagada {
+  display: inline-block;
+  background: #e0f4e6;
+  color: #218044;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .resumen-ventas {
+    grid-template-columns: 1fr;
+  }
+
+  .ventas-container {
+    padding: 15px;
+  }
+}

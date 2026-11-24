@@ -1,0 +1,185 @@
+
+.productos-container {
+  padding: 25px;
+  color: #292929;
+}
+
+.productos-encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.productos-encabezado h1 {
+  margin: 0 0 7px;
+  font-size: 28px;
+}
+
+.productos-encabezado p {
+  color: #777;
+  margin: 0;
+}
+
+.contador-productos {
+  background: #fff1e8;
+  color: #c45b19;
+  padding: 12px 18px;
+  border-radius: 9px;
+  font-weight: bold;
+}
+
+.productos-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.formulario-productos,
+.lista-productos {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #00000010;
+}
+
+.formulario-productos h2,
+.lista-productos h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.formulario-productos form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 18px;
+}
+
+.formulario-productos label {
+  font-weight: 600;
+  align-self: end;
+}
+
+.formulario-productos input,
+.formulario-productos select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  font-size: 14px;
+  background: white;
+}
+
+.acciones-formulario {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.acciones-formulario button,
+.acciones-tabla button {
+  border: none;
+  border-radius: 7px;
+  padding: 10px 13px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-guardar-producto {
+  background: #d96822;
+  color: white;
+}
+
+.btn-guardar-producto:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-cancelar-producto {
+  background: #e8e8e8;
+  color: #333;
+}
+
+.tabla-productos-contenedor {
+  overflow-x: auto;
+}
+
+.tabla-productos {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.tabla-productos th,
+.tabla-productos td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.tabla-productos th {
+  background: #f7f7f7;
+  color: #555;
+}
+
+.estado-producto {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.estado-producto.activo {
+  background: #e3f5e9;
+  color: #238348;
+}
+
+.estado-producto.inactivo {
+  background: #fce7e7;
+  color: #bd3737;
+}
+
+.acciones-tabla {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.btn-editar-producto {
+  background: #e6efff;
+  color: #285a9c;
+}
+
+.btn-disponibilidad {
+  background: #fff1d9;
+  color: #94600b;
+}
+
+.btn-eliminar-producto {
+  background: #fde5e5;
+  color: #b52c2c;
+}
+
+.productos-vacios {
+  color: #888;
+  padding: 20px 0;
+}
+
+@media (max-width: 700px) {
+  .productos-encabezado {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .formulario-productos form {
+    grid-template-columns: 1fr;
+  }
+
+  .acciones-formulario {
+    grid-column: auto;
+  }
+}

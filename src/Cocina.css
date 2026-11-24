@@ -1,0 +1,168 @@
+
+.cocina-container {
+  padding: 25px;
+  color: #292929;
+}
+
+.encabezado-cocina h1 {
+  margin-bottom: 5px;
+  font-size: 28px;
+}
+
+.encabezado-cocina p {
+  color: #777;
+  margin-top: 0;
+}
+
+.resumen-cocina {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.resumen-cocina div {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #00000012;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.resumen-cocina span {
+  color: #777;
+}
+
+.resumen-cocina strong {
+  font-size: 28px;
+}
+
+.tablero-cocina {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 15px;
+  align-items: start;
+  overflow-x: auto;
+}
+
+.columna-cocina {
+  background: #f1f2f5;
+  padding: 15px;
+  border-radius: 12px;
+  min-height: 250px;
+}
+
+.columna-cocina h2 {
+  font-size: 17px;
+  margin-top: 0;
+}
+
+.tarjeta-cocina {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px #00000010;
+}
+
+.tarjeta-cocina h3 {
+  margin-top: 0;
+  color: #d35400;
+}
+
+.tarjeta-cocina ul {
+  padding-left: 20px;
+}
+
+.tarjeta-cocina li {
+  margin-bottom: 8px;
+}
+
+.total-cocina {
+  font-weight: bold;
+}
+
+.tarjeta-cocina button {
+  width: 100%;
+  padding: 11px;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.btn-preparar {
+  background: #e67e22;
+}
+
+.btn-listo {
+  background: #27864b;
+}
+
+.btn-entregado {
+  background: #4267a9;
+}
+
+.mensaje-entregado {
+  color: #27864b;
+  font-weight: bold;
+}
+
+.sin-pedidos {
+  color: #888;
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .resumen-cocina {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tablero-cocina {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 550px) {
+  .tablero-cocina {
+    grid-template-columns: 1fr;
+  }
+}
+
+.acciones-entregado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.btn-regresar-preparacion {
+  width: 100%;
+  padding: 11px;
+  background-color: #1d4ed8;
+  color: #ffffff;
+  border: 2px solid #1e40af;
+  border-radius: 7px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.btn-regresar-preparacion:hover {
+  background-color: #1e40af;
+  color: #ffffff;
+}
+
+.btn-regresar-preparacion:disabled {
+  background-color: #94a3b8;
+  color: #ffffff;
+  cursor: not-allowed;
+  opacity: 0.8;
+}

@@ -1,0 +1,441 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f6f8;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: #202b25;
+  color: white;
+  padding: 25px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.logo span {
+  font-size: 35px;
+}
+
+.logo h2 {
+  font-size: 16px;
+}
+
+.logo small {
+  color: #b8c6bb;
+}
+
+.menu-title {
+  font-size: 11px;
+  color: #9ba99e;
+  margin-bottom: 15px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu-item,
+.cerrar-sesion {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  text-align: left;
+  font-size: 14px;
+}
+
+.menu-item:hover,
+.menu-item.activo {
+  background: #d97732;
+}
+
+.cerrar-sesion {
+  margin-top: auto;
+  color: #ffb3a8;
+}
+
+.contenido {
+  flex: 1;
+  padding: 25px;
+  min-width: 0;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.topbar h2 {
+  font-size: 21px;
+  color: #26352b;
+}
+
+.topbar p {
+  color: #777;
+  margin-top: 5px;
+}
+
+.usuario {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  background: #d97732;
+  color: white;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.bienvenida h1 {
+  color: rgb(236, 103, 26);
+  font-size: 32px;
+}
+
+.bienvenida p {
+  color: white;
+}
+
+.estadisticas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.tarjeta,
+.panel {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0000000c;
+}
+
+.tarjeta span {
+  color: #777;
+  font-size: 14px;
+}
+
+.tarjeta h2 {
+  margin: 15px 0;
+  color: #d97732;
+  font-size: 28px;
+}
+
+.tarjeta p,
+.panel p {
+  color: #888;
+  font-size: 13px;
+}
+
+.panel h2 {
+  margin-bottom: 15px;
+  color: #26352b;
+}
+
+@media (max-width: 900px) {
+  .estadisticas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    width: 75px;
+    padding: 15px 8px;
+  }
+
+  .logo h2,
+  .logo small,
+  .menu-title,
+  .menu-item:not(.activo) {
+    display: none;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .menu-item {
+    justify-content: center;
+    font-size: 0;
+  }
+
+  .cerrar-sesion {
+    font-size: 0;
+    justify-content: center;
+  }
+
+  .estadisticas {
+    grid-template-columns: 1fr;
+  }
+
+  .contenido {
+    padding: 15px;
+  }
+
+  .topbar {
+    gap: 10px;
+  }
+}
+
+/* DASHBOARD PRINCIPAL */
+
+.dashboard {
+  padding: 20px 0;
+}
+
+.fecha-dashboard {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.dashboard .bienvenida {
+  background: linear-gradient(120deg, #d96b24, #f08b3c);
+  color: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.dashboard .bienvenida h1 {
+  margin: 0 0 10px;
+  font-size: 25px;
+}
+
+.dashboard .bienvenida p {
+  margin: 0;
+  color: #fff5eb;
+}
+
+.dashboard .estadisticas {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.dashboard .tarjeta {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 3px 10px #0000000c;
+  position: relative;
+}
+
+.dashboard .tarjeta-icono {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff0e5;
+  color: #df762e;
+  margin-bottom: 15px;
+}
+
+.dashboard .tarjeta span {
+  color: #777;
+  font-size: 14px;
+}
+
+.dashboard .tarjeta h2 {
+  font-size: 26px;
+  margin: 10px 0;
+  color: #252525;
+}
+
+.dashboard .tarjeta p {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+}
+
+.panel-dashboard {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  margin-bottom: 22px;
+  box-shadow: 0 3px 10px #0000000c;
+}
+
+.titulo-panel {
+  margin-bottom: 20px;
+}
+
+.titulo-panel h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  margin: 0;
+}
+
+.estados-dashboard {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.estado-dashboard {
+  border-radius: 9px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.estado-dashboard span {
+  font-size: 13px;
+}
+
+.estado-dashboard strong {
+  font-size: 25px;
+}
+
+.estado-dashboard.pendiente {
+  background: #fff0e5;
+  color: #b85b19;
+}
+
+.estado-dashboard.preparando {
+  background: #fff8d9;
+  color: #9b7511;
+}
+
+.estado-dashboard.listo {
+  background: #e4f0ff;
+  color: #2763a8;
+}
+
+.estado-dashboard.entregado {
+  background: #e3f5e9;
+  color: #218044;
+}
+
+.dashboard-vacio {
+  padding: 20px;
+  text-align: center;
+  color: #888;
+}
+
+.lista-productos-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.producto-dashboard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px;
+  background: #fafafa;
+  border-radius: 8px;
+}
+
+.producto-ranking {
+  width: 35px;
+  height: 35px;
+  background: #fff0e5;
+  color: #d96b24;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.producto-ranking-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.producto-ranking-info span {
+  font-size: 12px;
+  color: #888;
+}
+
+.tabla-dashboard-contenedor {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tabla-dashboard {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 550px;
+}
+
+.tabla-dashboard th,
+.tabla-dashboard td {
+  padding: 13px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+}
+
+.tabla-dashboard th {
+  background: #f8f8f8;
+  color: #555;
+}
+
+@media (max-width: 1000px) {
+  .dashboard .estadisticas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .dashboard .estadisticas,
+  .estados-dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard .bienvenida {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
